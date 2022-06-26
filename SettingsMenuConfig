@@ -1,3 +1,33 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@PersonGuyGit
+PersonGuyGit /
+bcirpgdocs
+Public
+generated from Ismaestro/markdown-template
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+
+    Settings
+
+bcirpgdocs/SettingsMenuConfig
+@PersonGuyGit
+PersonGuyGit Create SettingsMenuConfig
+Latest commit ae56e50 21 seconds ago
+History
+1 contributor
+82 lines (54 sloc) 2.63 KB
 <p align="center">
   <a href="https://example.com/">
     <img src="https://via.placeholder.com/72" alt="Logo" width=72 height=72>
@@ -37,20 +67,18 @@ This module is the behind the scenes code for the Settings Menu UI. Here is what
 
 In this file the main functions that are of importance are saveToFile and saveToInstance. 
 
-- saveToFile allows for you to create the actual cfg file. Be sure to follow this template for adding a new item to the cfg
-  > Template: iniFile.set_value(rowName, varName, Var.value/selection)
-  > Example Usage: iniFile.set_value("player_preferences", "player_name", NameVar.text)
+- **saveToFile** allows for you to create the actual cfg file. Be sure to follow this template for adding a new item to the cfg. <br> The general process of storing a value, is to import the UI option from  .tscn, then just create another set_value function as shown below.
+  > **Template:** iniFile.set_value(rowName, varName, Var.selection)
+  
+  > **Example Usage:**  iniFile.set_value("player_preferences", "player_name", NameVar.text)
+
+- **saveToInstance** allows for you to save the same value that you put into the .cfg file, into a Singleton file. <br> This reduces the need to directly read from the save file for every single check needed. 
+
+  > **Template:** ImportedsaveObject.InstanceObject.valueYouWantToSaveFromInstance = NameVar.text
+  
+  > **Example Usage:** saveObject.settingsInstance.inputName = NameVar.text
 
 
-```text
-folder1/
-└── folder2/
-    ├── folder3/
-    │   ├── file1
-    │   └── file2
-    └── folder4/
-        ├── file3
-        └── file4
 ```
 
 ## Bugs and feature requests
@@ -80,3 +108,18 @@ Some Text
 Code and documentation copyright 2011-2018 the authors. Code released under the [MIT License](https://reponame/blob/master/LICENSE).
 
 Enjoy :metal:
+
+    © 2022 GitHub, Inc.
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
